@@ -12,8 +12,11 @@ const LandPage = () => {
   }, []);
   return (
     <MainLayout>
-      <div>
-        Hola soy la página de inicio
+      <div className={styles.titulo}>
+        MIS PEDIDOS
+      </div>
+      <div className={styles.titulo2}>
+        MIS PEDIDOS
       </div>
     </MainLayout>
   );

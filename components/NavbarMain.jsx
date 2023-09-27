@@ -12,8 +12,8 @@ const NavbarMain = () => {
 
 
   return (
-    <div className={styles.header}>
-      Soy el menú
+    <div className={styles.header_content}>
+      
     </div>
   );
 };
