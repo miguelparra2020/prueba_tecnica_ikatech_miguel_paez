@@ -3,15 +3,17 @@ import React from 'react';
 import styles from '../styles/FooterMain.module.scss';
 
 const FooterMain = () => {
+  const year = new Date().getFullYear();
   return (
     <div className={styles.footer}>
-    <div >
+      <div className={styles.container}>
+        
+      </div>
       <div className={styles.container}>
             <p className={styles.container__p}>
-              Copyright © 2023 - SENA CDIT / ADSO - 2465417
+              Copyright © {year} - MIGUEL PÁEZ
             </p>
       </div>
-    </div>
     </div>
   );
 };
