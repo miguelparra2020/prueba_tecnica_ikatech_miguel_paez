@@ -1,0 +1,41 @@
+@import './colors.module.scss';
+.main {
+    background-color: $colorWhite;
+    margin-top: 0rem;
+} 
+.div_inicial{
+    width: 100%;
+    height: 14vh;
+}
+.div_contenedor_imagen{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img_dashboard{
+    --shadow-color: 122.24deg 36.08% 30.59%;
+    width: 680px;
+    height: 50vh;
+    box-shadow:
+    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+    5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
+}
+
+
+@media (max-width: 750px) {
+    .div_contenedor_imagen{
+        height: 32vh;
+    }
+    .img_dashboard{
+        width: 90%;
+        height: 28vh;
+
+    }   
+    .div_inicial{
+        height: 21vh;
+    } 
+}
