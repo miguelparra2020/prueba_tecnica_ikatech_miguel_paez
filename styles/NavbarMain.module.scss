@@ -101,7 +101,7 @@
     justify-content: center;
     color: $color_black;
 }
-.div_card_movil{
+.div_car_movil{
     display: none;
 }
 .div_envio{
@@ -117,8 +117,36 @@
 }
 .content_menu{
     width: 100%;
-    background-color: red;
     height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1.6px solid $color_7;
+}
+.div_menu_carrito{
+    width: 90%;
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    font-weight: 540;
+    color: $color_6;
+}
+.div_menu{
+    width: 40%;
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.div_carrito{
+    width: 60%;
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 @media (max-width:750px) {
@@ -155,7 +183,7 @@
     .div_input_icon_buscar{
         width: 50%;
     }
-    .div_card_movil{
+    .div_car_movil{
         width: 50%;
         display: flex;
         flex-direction: row;
@@ -167,5 +195,13 @@
     .div_envio{
         font-size: 12px;
         height: 4vh;
+    }
+    .div_carrito{
+        display: none;
+    }
+    .div_menu{
+        width: 100%;
+        font-weight: 600;
+        font-size: 14px;
     }
 }
