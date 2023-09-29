@@ -60,7 +60,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: blue;
+}
+.img_logotipo{
+    width: 300px;
+    height: 80px;
 }
 .div_buscador_envio{
     width: 70%;
@@ -98,6 +101,9 @@
     justify-content: center;
     color: $color_black;
 }
+.div_card_movil{
+    display: none;
+}
 .div_envio{
     width: 100%;
     height: 6vh;
@@ -109,14 +115,57 @@
     font-size: 16px;
     color: $color_4;
 }
-
-
-
-
+.content_menu{
+    width: 100%;
+    background-color: red;
+    height: 5vh;
+}
 
 @media (max-width:750px) {
     .div_menu_micuenta{
         font-size: 10px;
         justify-content: center;
+    }
+    .content_logo_buscador_envio{
+        height: 20vh;
+    }
+    .div_logo_buscador_envio{
+        flex-direction: column;
+        height: 20vh;
+    }
+    .div_logo_tipo{
+        width: 100%;
+        height: 10vh;
+    }
+    .img_logotipo{
+        width: 250px;
+        height: 8vh;
+    }
+    .div_buscador_envio{
+        width: 100%;
+        flex-direction: column;
+    }
+    .div_buscador{
+        width: 100%;
+        height: 6vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .div_input_icon_buscar{
+        width: 50%;
+    }
+    .div_card_movil{
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;        
+        justify-content: flex-end;
+        font-weight: 550;
+        color: $color_6;
+    }
+    .div_envio{
+        font-size: 12px;
+        height: 4vh;
     }
 }
