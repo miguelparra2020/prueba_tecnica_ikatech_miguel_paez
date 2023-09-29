@@ -36,7 +36,7 @@ const NavbarMain = () => {
       <div className={styles.content_logo_buscador_envio}>
           <div className={styles.div_logo_buscador_envio}>
             <div className={styles.div_logo_tipo}>
-                  <Image src="/img/21.jpg" width={300} height={80} alt='Imagen Logo Tipo' className={styles.img_logotipo}/>
+                  <Image src="/img/21.JPG" width={300} height={80} alt='Imagen Logo Tipo' className={styles.img_logotipo}/>
             </div>
             <div className={styles.div_buscador_envio}>
                 <div className={styles.div_buscador}>
