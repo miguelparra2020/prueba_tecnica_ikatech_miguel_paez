@@ -53,8 +53,15 @@ const LandPage = () => {
      </div>
      {/* Category 1 */}
      {/* Banner 2 */}
-     <div >
-
+     <div className={styles.content_banner_2}>
+      <div className={styles.div_banner_2}>
+        <button className={styles.buttons}>
+          <div className={styles.div_button_banner_2}>
+            <div className={styles.div_triangle_play}>
+            </div>
+          </div>
+        </button>
+      </div>      
      </div>
      {/* Banner 2 */}
      {/* Category  2 */}
