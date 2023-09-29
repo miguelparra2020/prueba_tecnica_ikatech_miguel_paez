@@ -1,7 +1,7 @@
 @import './colors.module.scss';
 .content_banner_1{
     width: 100%;
-    height: 50vh;
+    height: 70vh;
     background-color: $color_9;
     display: flex;
     align-items: center;
@@ -9,19 +9,22 @@
 }
 .div_banner_1{
     width: 80%;
-    height: 50vh;
+    height: 70vh;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    background-image: url('/img/22.JPG');
+    background-size:cover;
+    background-position: center;
 }
 .div_banner_1_divisor_1{
     width: 50%;
-    height: 50vh;
+    height: 70vh;
 }
 .div_banner_1_divisor_2{
     width: 50%;
-    height: 50vh;
+    height: 70vh;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -29,11 +32,11 @@
 .div_button_shop_now{
     background-color: $color_white;
     color: $color_8;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-bottom: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 40px;
     font-family: 'glyphicons-halflings-regular', sans-serif;
     font-weight: 600;
     font-size: 12px;
@@ -49,3 +52,4 @@
             2.5px 5px 7px -1.1px hsla(18, 10%, 51%, 0.55),
             5.8px 11.6px 16.1px -1.7px hsla(18, 10%, 51%, 0.55);
 }
+
