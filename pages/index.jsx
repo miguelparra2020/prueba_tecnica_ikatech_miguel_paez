@@ -65,8 +65,36 @@ const LandPage = () => {
      </div>
      {/* Banner 2 */}
      {/* Category  2 */}
-     <div>
-
+     <div className={styles.content_category_2}>
+      <div className={styles.div_content_category_2}>
+        <div className={styles.div_content_category_2_divs}>
+          <div className={styles.div_content_category_2_divs_internos_1}>
+            <button className={styles.buttons}>
+              <div className={styles.div_buttons_category_2}>
+                ACCESORIOS
+              </div>
+            </button>
+          </div>
+        </div>
+        <div className={styles.div_content_category_2_divs}>
+          <div className={styles.div_content_category_2_divs_internos_2}>
+            <div className={styles.div_content_category_2_divs_mujer}>
+              <button className={styles.buttons}>
+                <div className={styles.div_buttons_category_2}>
+                  MUJER
+                </div>
+              </button>
+            </div>
+            <div className={styles.div_content_category_2_divs_hombre}>
+              <button className={styles.buttons}>
+                <div className={styles.div_buttons_category_2}>
+                  HOMBRE
+                </div>
+              </button>
+            </div>            
+          </div>
+        </div>
+      </div>
      </div>
      {/* Category  2 */}
 

@@ -123,7 +123,7 @@
 // Banner 2
 .content_banner_2{
     width: 100%;
-    height: 70vh;
+    height: 65vh;
     background-color: $color_9;
     display: flex;
     align-items: center;
@@ -131,11 +131,14 @@
 
 }
 .div_banner_2{
-    width: 90%;
-    height: 70vh;
+    width: 85%;
+    height: 65vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url('/img/25.jpg');
+    background-size:cover;
+    background-position: center;
 }
 .div_button_banner_2{
     width: 70px;
@@ -162,13 +165,87 @@
     border-left: 20px solid $color_12;
     margin-left: 25px;
 }
-.div_banner_2{
-background-image: url('/img/25.jpg');
-background-size:cover;
-background-position: center;
-}
 // Banner 2
+// Category 2
+.content_category_2{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.div_content_category_2{
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.div_content_category_2_divs{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+}
+.div_content_category_2_divs_internos_1{
+    width: 90%;
+    height: 90%;
+    background-image: url('/img/26.jpg');
+    background-size:cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+.div_content_category_2_divs_internos_2{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+.div_content_category_2_divs_mujer{
+    width: 100%;
+    height: 50%;
+    background-image: url('/img/27.jpg');
+    background-size:cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.div_content_category_2_divs_hombre{
+    width: 100%;
+    height: 50%;
+    background-image: url('/img/28.jpg');
+    background-size:cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.div_buttons_category_2{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 10px;
+    background-color: $color_white;
+    opacity: 0.8;
+}
+.div_buttons_category_2:hover{
+    cursor: pointer;
+    opacity: 1;
+    box-shadow: 0.3px 0.5px 0.7px hsla(18, 10%, 51%, 0.3),
+            1.1px 2.1px 3px -0.6px hsla(18, 10%, 51%, 0.3),
+            2.5px 5px 7px -1.1px hsla(18, 10%, 51%, 0.3),
+            5.8px 11.6px 16.1px -1.7px hsla(18, 10%, 51%, 0.3);
+}
+
+// Category 2
 
 
 
