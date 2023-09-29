@@ -20,17 +20,23 @@ const NavbarMain = () => {
       </div>
       <div className={styles.content_menu_micuenta}>
         <div className={styles.div_menu_micuenta}>
+          <Link href="/directoriotiendas">
             <div>
                 DIRECTORIO DE TIENDAS
             </div>
+            </Link>
             &nbsp;&nbsp;&nbsp;
+          <Link href="/servicioalcliente">
             <div>
                 SERVICIO AL CLIENTE
             </div>
+          </Link>
             &nbsp;&nbsp;&nbsp;
+          <Link href="/micuenta">
             <div>
                 MI CUENTA
             </div>
+          </Link>
         </div>
       </div>
       <div className={styles.content_logo_buscador_envio}>
