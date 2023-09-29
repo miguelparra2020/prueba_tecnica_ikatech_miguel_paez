@@ -148,6 +148,15 @@
     align-items: center;
     justify-content: flex-end;
 }
+.efecto_menu_1:hover{
+    background-color: $color_3;
+    opacity: 0.5;
+    color: $color_white;
+}
+.button_link{
+    all: unset;
+    cursor: pointer;
+}
 
 @media (max-width:750px) {
     .div_menu_micuenta{

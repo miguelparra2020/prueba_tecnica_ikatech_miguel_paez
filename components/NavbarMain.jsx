@@ -15,25 +15,27 @@ const NavbarMain = () => {
 
   return (
     <div className={styles.header_content}>
-      <div className={styles.div_promo}>
-        HOT SALE -30% EN SANDALIAS
-      </div>
+      <Link href="/" className={styles.button_link}>
+        <div className={styles.div_promo}>
+          HOT SALE -30% EN SANDALIAS
+        </div>
+      </Link>
       <div className={styles.content_menu_micuenta}>
         <div className={styles.div_menu_micuenta}>
-          <Link href="/directoriotiendas">
-            <div>
+          <Link href="/directoriotiendas" className={styles.button_link}>
+            <div className={styles.efecto_menu_1}>
                 DIRECTORIO DE TIENDAS
             </div>
             </Link>
             &nbsp;&nbsp;&nbsp;
-          <Link href="/servicioalcliente">
-            <div>
+          <Link href="/servicioalcliente" className={styles.button_link}>
+            <div className={styles.efecto_menu_1}>
                 SERVICIO AL CLIENTE
             </div>
           </Link>
             &nbsp;&nbsp;&nbsp;
-          <Link href="/micuenta">
-            <div>
+          <Link href="/micuenta" className={styles.button_link}>
+            <div className={styles.efecto_menu_1}>
                 MI CUENTA
             </div>
           </Link>
@@ -41,9 +43,11 @@ const NavbarMain = () => {
       </div>
       <div className={styles.content_logo_buscador_envio}>
           <div className={styles.div_logo_buscador_envio}>
-            <div className={styles.div_logo_tipo}>
-                  <Image src="/img/logo-2.png" width={300} height={80} alt='Imagen Logo Tipo' className={styles.img_logotipo}/>
-            </div>
+            <Link href="/" className={styles.button_link}>
+              <div className={styles.div_logo_tipo}>
+                    <Image src="/img/logo-2.png" width={300} height={80} alt='Imagen Logo Tipo' className={styles.img_logotipo}/>
+              </div>
+            </Link>
             <div className={styles.div_buscador_envio}>
                 <div className={styles.div_buscador}>
                   <div className={styles.div_input_icon_buscar}>
