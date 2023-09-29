@@ -19,9 +19,11 @@ const LandPage = () => {
 
           </div>
           <div className={styles.div_banner_1_divisor_2}>
-            <div className={styles.div_button_shop_now}>
-                SHOP NOW
-            </div>
+            <button className={styles.buttons}>
+              <div className={styles.div_button_shop_now}>
+                  SHOP NOW
+              </div>
+            </button>
           </div>
       </div>
      </div>
@@ -31,23 +33,27 @@ const LandPage = () => {
       <div className={styles.div_category_1_divs_1_2}>
         <div className={styles.div_category_1_divs_1}>
           <div className={styles.div_category_1_divs_1_img}>
+            <button className={styles.buttons}>
               <div className={styles.div_button_category_1_divs_1}>
                   HOMBRE
               </div>
+            </button>
           </div>
         </div>
         <div className={styles.div_category_1_divs_1}>
           <div className={styles.div_category_1_divs_1_img_2}>
+            <button className={styles.buttons}>
               <div className={styles.div_button_category_1_divs_1}>
                   MUJER
               </div>
+            </button>
           </div>
         </div>
       </div>
      </div>
      {/* Category 1 */}
      {/* Banner 2 */}
-     <div>
+     <div >
 
      </div>
      {/* Banner 2 */}
