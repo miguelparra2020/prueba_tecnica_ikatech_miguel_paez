@@ -36,8 +36,12 @@ const LandPage = () => {
               </div>
           </div>
         </div>
-        <div className={styles.div_category_1_divs_2}>
-
+        <div className={styles.div_category_1_divs_1}>
+          <div className={styles.div_category_1_divs_1_img_2}>
+              <div className={styles.div_button_category_1_divs_1}>
+                  MUJER
+              </div>
+          </div>
         </div>
       </div>
      </div>
