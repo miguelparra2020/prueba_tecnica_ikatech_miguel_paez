@@ -12,6 +12,7 @@ const LandPage = () => {
   }, []);
   return (
     <MainLayout>
+      {/* Banner 1 */}
      <div className={styles.content_banner_1}>
       <div className={styles.div_banner_1}>
           <div className={styles.div_banner_1_divisor_1}>
@@ -23,8 +24,35 @@ const LandPage = () => {
             </div>
           </div>
       </div>
+     </div>
+     {/* Banner 1 */}
+     {/* Category 1 */}
+     <div className={styles.content_category_1}>
+      <div className={styles.div_category_1_divs_1_2}>
+        <div className={styles.div_category_1_divs_1}>
+          <div className={styles.div_category_1_divs_1_img}>
+              <div className={styles.div_button_category_1_divs_1}>
+                  HOMBRE
+              </div>
+          </div>
+        </div>
+        <div className={styles.div_category_1_divs_2}>
+
+        </div>
+      </div>
+     </div>
+     {/* Category 1 */}
+     {/* Banner 2 */}
+     <div>
 
      </div>
+     {/* Banner 2 */}
+     {/* Category  2 */}
+     <div>
+
+     </div>
+     {/* Category  2 */}
+
     </MainLayout>
   );
 };
