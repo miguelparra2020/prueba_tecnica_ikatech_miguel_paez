@@ -235,10 +235,15 @@
     margin-bottom: 10px;
     background-color: $color_white;
     opacity: 0.8;
+    font-family: 'glyphicons-halflings-regular', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: $color_6;
 }
 .div_buttons_category_2:hover{
     cursor: pointer;
     opacity: 1;
+    font-weight: 800;
     box-shadow: 0.3px 0.5px 0.7px hsla(18, 10%, 51%, 0.3),
             1.1px 2.1px 3px -0.6px hsla(18, 10%, 51%, 0.3),
             2.5px 5px 7px -1.1px hsla(18, 10%, 51%, 0.3),
@@ -309,5 +314,26 @@
         margin-left: 15px;
     }
 // Banner 2
+// Category2
+    .content_category_2{
+        height: 27vh;
+    }
+    .div_content_category_2{
+        width: 90%;
+        height: 27vh;
+    }
+    .div_content_category_2_divs{
+        height: 27vh;
+    }
+    .div_buttons_category_2{
+        font-weight: 550;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-bottom: 5px;
+    }
+// Category 2
+
         
 }
