@@ -12,12 +12,19 @@ const LandPage = () => {
   }, []);
   return (
     <MainLayout>
-      <div className={styles.titulo}>
-        MIS PEDIDOS
+     <div className={styles.content_banner_1}>
+      <div className={styles.div_banner_1}>
+          <div className={styles.div_banner_1_divisor_1}>
+
+          </div>
+          <div className={styles.div_banner_1_divisor_2}>
+            <div className={styles.div_button_shop_now}>
+                SHOP NOW
+            </div>
+          </div>
       </div>
-      <div className={styles.titulo2}>
-        MIS PEDIDOS
-      </div>
+
+     </div>
     </MainLayout>
   );
 };
