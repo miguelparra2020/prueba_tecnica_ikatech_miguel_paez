@@ -251,12 +251,9 @@
 }
 // Category 2
 // Banner Instagram
-
-// Banner Instagram
 .content_banner_instagram{
     width: 100%;
     height: 35vh;
-    background-color: blue;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -265,7 +262,6 @@
 .div_banner_instagram_titulo{
     width: 80%;
     height: 10vh;
-    background-color: gray;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -274,7 +270,6 @@
 .div_banner_instagram{
     width: 80%;
     height: 25vh;
-    background-color: yellow;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -283,7 +278,6 @@
 .div_banner_instagram_div_1{
     width: 50%;
     height: 25vh;
-    background-color: green;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -292,7 +286,6 @@
 .div_banner_instagram_div_2{
     width: 50%;
     height: 25vh;
-    background-color: orange;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -301,33 +294,46 @@
 .div_banner_instagram_img_1{
     width: 30%;
     height: 90%;
-    background-color: red;
+    background-image: url('/img/29.JPG');
+    background-size:cover;
+    background-position: center;
 }
 .div_banner_instagram_img_2{
     width: 30%;
     height: 90%;
-    background-color: blue;
+    background-image: url('/img/30.JPG');
+    background-size:cover;
+    background-position: center;
 }
 .div_banner_instagram_img_3{
     width: 30%;
     height: 90%;
-    background-color: yellow;
+    background-image: url('/img/31.JPG');
+    background-size:cover;
+    background-position: center;
 }
 .div_banner_instagram_img_4{
     width: 30%;
     height: 90%;
-    background-color: red;
+    background-image: url('/img/32.JPG');
+    background-size:cover;
+    background-position: center;
 }
 .div_banner_instagram_img_5{
     width: 30%;
     height: 90%;
-    background-color: blue;
+    background-image: url('/img/33.JPG');
+    background-size:cover;
+    background-position: center;
 }
 .div_banner_instagram_img_6{
     width: 30%;
     height: 90%;
-    background-color: yellow;
+    background-image: url('/img/34.JPG');
+    background-size:cover;
+    background-position: center;
 }
+// Banner Instagram
 
 .buttons {
     all: unset;
@@ -414,6 +420,20 @@
         margin-bottom: 5px;
     }
 // Category 2
-
+//  Banner Instagram
+    .div_banner_instagram_titulo{
+        width: 90%;
+    }
+    .div_banner_instagram{
+        width: 90%;
+        flex-direction: column;
+    }
+    .div_banner_instagram_div_1{
+        width: 100%;
+    }
+    .div_banner_instagram_div_2{
+        width: 100%;
+    }
+//  Banner Instagram
         
 }
