@@ -1,13 +1,22 @@
+@import './colors.module.scss';
+
 .Content_footer_redes{
     width: 100%;
-    height: 20vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: $color_13;
+    color: $color_14;
+}
+.div_fp_pagina_instagram{
+    margin-top: 20px;
+    margin-bottom: 5px; 
+    font-size: 30px;
+    font-weight: 500;
 }
 .div_fp_divisor{
-    width: 50px;
+    width: 100px;
     height: 1.5px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -17,5 +26,7 @@
 .div_fp_redes_icons{
     display: flex;
     flex-direction: row;
+    margin-top: 5px;
+    margin-bottom: 20px;
 }
 
