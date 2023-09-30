@@ -38,6 +38,7 @@
     align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
+    border-bottom: 1.6px solid rgba(163, 166, 168, 0.5);
 }
 .div_footer_column{
     width: 25%;
@@ -101,6 +102,13 @@
     justify-content: center;
     color: $color_black;
 }
+.content_footer_pays{
+    width: 100%;
+    height: 20vh;
+    background-image: url('/img/35.jpg');
+    background-size:cover;
+    background-position: center;
+}
 // Footer Menú
 @media (max-width:750px) {
     .div_footer_column{
@@ -113,6 +121,9 @@
     .div_footer_column_links{
         margin-top: 10PX;
         margin-bottom: 10PX;
+    }
+    .content_footer_pays{
+        height: 7vh;
     }
 }
 
