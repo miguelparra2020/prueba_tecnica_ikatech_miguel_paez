@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import  MainLayout from '../components/layouts/MainLayout';
 import styles from '../styles/index.module.scss';
+import Link from 'next/link';
 import Image from 'next/image';
 
 import { Toaster, toast } from 'sonner';
@@ -20,9 +21,11 @@ const LandPage = () => {
           </div>
           <div className={styles.div_banner_1_divisor_2}>
             <button className={styles.buttons}>
+            <Link href="/carrito" className={styles.button_link}>
               <div className={styles.div_button_shop_now}>
                   SHOP NOW
               </div>
+              </Link>
             </button>
           </div>
       </div>
@@ -34,18 +37,22 @@ const LandPage = () => {
         <div className={styles.div_category_1_divs_1}>
           <div className={styles.div_category_1_divs_1_img}>
             <button className={styles.buttons}>
-              <div className={styles.div_button_category_1_divs_1}>
-                  HOMBRE
-              </div>
+              <Link href="/categoria" className={styles.button_link}>
+                <div className={styles.div_button_category_1_divs_1}>
+                    HOMBRE
+                </div>
+              </Link>
             </button>
           </div>
         </div>
         <div className={styles.div_category_1_divs_1}>
           <div className={styles.div_category_1_divs_1_img_2}>
             <button className={styles.buttons}>
-              <div className={styles.div_button_category_1_divs_1}>
-                  MUJER
-              </div>
+              <Link href="/categoria" className={styles.button_link}>
+                <div className={styles.div_button_category_1_divs_1}>
+                    MUJER
+                </div>
+              </Link>
             </button>
           </div>
         </div>
@@ -70,9 +77,11 @@ const LandPage = () => {
         <div className={styles.div_content_category_2_divs}>
           <div className={styles.div_content_category_2_divs_internos_1}>
             <button className={styles.buttons}>
-              <div className={styles.div_buttons_category_2}>
-                ACCESORIOS
-              </div>
+              <Link href="/categoria" className={styles.button_link}>
+                <div className={styles.div_buttons_category_2}>
+                  ACCESORIOS
+                </div>
+              </Link>
             </button>
           </div>
         </div>
@@ -80,16 +89,20 @@ const LandPage = () => {
           <div className={styles.div_content_category_2_divs_internos_2}>
             <div className={styles.div_content_category_2_divs_mujer}>
               <button className={styles.buttons}>
-                <div className={styles.div_buttons_category_2}>
-                  MUJER
-                </div>
+                <Link href="/categoria" className={styles.button_link}>
+                  <div className={styles.div_buttons_category_2}>
+                    MUJER
+                  </div>
+                  </Link>
               </button>
             </div>
             <div className={styles.div_content_category_2_divs_hombre}>
               <button className={styles.buttons}>
-                <div className={styles.div_buttons_category_2}>
-                  HOMBRE
-                </div>
+                <Link href="/categoria" className={styles.button_link}>
+                  <div className={styles.div_buttons_category_2}>
+                    HOMBRE
+                  </div>
+                </Link>
               </button>
             </div>            
           </div>

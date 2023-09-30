@@ -257,6 +257,11 @@
 .buttons {
     all: unset;
 }
+.button_link{
+    all: unset;
+    cursor: pointer;
+}
+
 
 
 @media (max-width:750px) {
