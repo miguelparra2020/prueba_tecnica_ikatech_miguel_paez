@@ -5,15 +5,15 @@ import Image from 'next/image';
 
 import { Toaster, toast } from 'sonner';
 
-const HombrePage = () => {
+const CategoriaPage = () => {
   useEffect(() => {   
 
   }, []);
   return (
     <MainLayout>
-     PÁGINA HOMBRE
+     PÁGINA CATEGORIA
     </MainLayout>
   );
 };
 
-export default HombrePage;
+export default CategoriaPage;

@@ -82,12 +82,12 @@ const NavbarMain = () => {
       <div className={styles.content_menu}>
         <div className={styles.div_menu_carrito}>
           <div className={styles.div_menu}>
-            <Link href="/hombre" className={styles.button_link}>
+            <Link href="/categoria" className={styles.button_link}>
               <div className={styles.efecto_menu_2}>
                 HOMBRE
               </div>
             </Link>
-            <Link href="/mujer" className={styles.button_link}>
+            <Link href="/categoria" className={styles.button_link}>
               <div className={styles.efecto_menu_2}>
                 MUJER
               </div>
