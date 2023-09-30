@@ -1,5 +1,6 @@
 @import './colors.module.scss';
 
+// Footer Redes
 .Content_footer_redes{
     width: 100%;
     display: flex;
@@ -22,11 +23,19 @@
     margin-bottom: 10px;
     background-color: gray;
 }
-
 .div_fp_redes_icons{
     display: flex;
     flex-direction: row;
     margin-top: 5px;
     margin-bottom: 20px;
 }
+// Footer Redes
+// Footer Menú
+.content_footer_menu{
+    width: 100%;
+    height: 50vh;
+    color: blue;
+}
+// Footer Menú
+
 
