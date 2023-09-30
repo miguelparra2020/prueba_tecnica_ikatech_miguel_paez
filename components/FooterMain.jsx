@@ -90,7 +90,6 @@ const FooterMain = () => {
         </div>
       </div>
       <div className={styles.content_footer_pays}>
-
       </div>
     </div>
   );
