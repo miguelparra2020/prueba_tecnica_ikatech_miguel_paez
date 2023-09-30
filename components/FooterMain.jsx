@@ -21,7 +21,48 @@ const FooterMain = () => {
         </div>
     </div>
     <div className={styles.content_footer_menu}>
-
+      <div className={styles.div_footer_column}>
+        <div className={styles.div_footer_column_title}>
+          SERVICIO AL CLIENTE
+        </div>
+        <div className={styles.div_footer_column_links}>
+          <div>
+            CONTÁCTENOS
+          </div>
+          <div>
+            CAMBIOS Y DEVOLUCIONES
+          </div>
+          <div>
+            POLÍTICAS DE LA TIENDA
+          </div>
+          <div>
+            POLÍTICAS DE DATOS
+          </div>
+        </div>
+      </div>
+      <div className={styles.div_footer_column}>
+        <div className={styles.div_footer_column_title}>
+          MI CUENTA
+        </div>
+        <div className={styles.div_footer_column_links}>
+          <div>
+            MIS PEDIDOS
+          </div>
+          <div>
+            MIS DEVOLUCIONES
+          </div>
+        </div>
+      </div>
+      <div className={styles.div_footer_column}>
+        <div className={styles.div_footer_column_title}>
+          RECURSOS
+        </div>
+      </div>
+      <div className={styles.div_footer_column}>
+        <div className={styles.div_footer_column_title}>
+          NEWSLETTER
+        </div>
+      </div>
     </div>
     </div>
   );
