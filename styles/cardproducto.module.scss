@@ -1,7 +1,6 @@
 @import './colors.module.scss';
 .content_card{
     width: 33%;
-    background-color: aqua;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,7 +10,6 @@
     width: 90%;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,7 +20,6 @@
 .div_card_producto_img_principal{
     width: 100%;
     height: 35vh;
-    background-color: red;
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -43,11 +40,10 @@
     margin-right: 10px;
     position: absolute; 
     z-index: 3;
-    color: red;
+    color: $color_18;
 }
 .div_card_producto_imgs_carrusel{
     width: 100%;
-    background-color: orange;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -56,17 +52,28 @@
 .div_card_producto_nombre{
     width: 100%;
     height: 7vh;
-    background-color:cornsilk;
+    font-family: 'glyphicons-halflings-regular', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: $color_19;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .div_card_producto_precio{
     width: 100%;
     height: 7vh;
-    background-color:cornflowerblue;
+    font-family: 'glyphicons-halflings-regular', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: $color_20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .div_card_producto_imgs_carrusel_peque{
     width: 33%;
     height: 12vh;
-    background-color: deepskyblue;
     position: relative;
     overflow: hidden;
 }

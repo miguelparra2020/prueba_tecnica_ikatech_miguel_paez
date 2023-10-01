@@ -2,10 +2,10 @@
 // data.js
 const data = [    
 {
-    "nombre": "Zapato azul",
-    "precio": 5000,
-    "referencia": "G40",
-    "foto": "1.jpg"
+"nombre": "Zapato azul",
+"precio": 5000,
+"referencia": "G40",
+"foto": "1.jpg"
 },
 {
 "nombre": "Zapato rojo",
