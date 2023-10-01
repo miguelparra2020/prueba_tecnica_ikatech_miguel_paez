@@ -109,6 +109,13 @@
     background-size:cover;
     background-position: center;
 }
+.buttons {
+    all: unset;
+}
+.button_link{
+    all: unset;
+    cursor: pointer;
+}
 // Footer Menú
 @media (max-width:750px) {
     .div_footer_column{
