@@ -253,7 +253,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: red;
 }
 .div_banner_instagram_titulo{
     width: 80%;
@@ -424,7 +423,10 @@
         width: 90%;
     }
     .content_banner_instagram{
-        height: 70vh;
+        height: 60vh;
+    }
+    .div_banner_instagram{
+        height: 50vh;
     }
     .div_banner_instagram{
         width: 90%;
