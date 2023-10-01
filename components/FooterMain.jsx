@@ -37,7 +37,7 @@ const FooterMain = () => {
       </div>
       <div className={styles.content_footer_menu}>
         <div className={styles.div_footer_column}>
-          <Link href="/servicioalcliente" className={styles.button_link}>
+          <Link href="/servicioalcliente" className={`${styles.button_link}`}>
             <div className={styles.div_footer_column_title}>
               SERVICIO AL CLIENTE
             </div>
