@@ -1,18 +1,40 @@
 // pages/index.js
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import  MainLayout from '../components/layouts/MainLayout';
 import styles from '../styles/index.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
+import ModalVideo from '../components/ModalVideo'
 
 import { Toaster, toast } from 'sonner';
 
 const LandPage = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
   useEffect(() => {   
 
   }, []);
   return (
     <MainLayout>
+      <button onClick={openModal}>Abrir Modal</button>
+      {isModalOpen && (
+        <ModalVideo isOpen={isModalOpen} closeModal={closeModal}>
+          <div className="modal-content">
+            <button className="close-button" onClick={closeModal}>
+              X
+            </button>
+            <h2>Contenido del Modal</h2>
+            <p>Aquí puedes colocar cualquier contenido que desees en tu modal.</p>
+          </div>
+        </ModalVideo>
+      )}
       {/* Banner 1 */}
      <div className={styles.content_banner_1}>
       <div className={styles.div_banner_1}>
