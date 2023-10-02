@@ -11,10 +11,10 @@ import { Toaster, toast } from 'sonner';
 
 const DetallePage = () => {
   const [ruta, setRuta] = useState('');
-  
   const partes = ruta.split("/");
   const nombre_producto = decodeURIComponent(partes[2]);
-
+  
+  
   const productos = data;
 
   const data_producto = [];
@@ -58,6 +58,8 @@ const DetallePage = () => {
       description: nombre_producto
     });
   }, [nombre_producto]);
+
+    console.log(productos)
   return (
     <MainLayout>
      <div className={styles.content_indicador_ruta}>
