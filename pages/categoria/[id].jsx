@@ -3,20 +3,76 @@ import React, { useEffect } from 'react';
 import  MainLayout from '../../components/layouts/MainLayout';
 import styles from '../../styles/detalle.module.scss'
 import Image from 'next/image';
+import data from '../../data/data.jsx';
 
 import { Toaster, toast } from 'sonner';
 
 const DetallePage = () => {
-  useEffect(() => {   
+  const rutaSinDominio = window.location.pathname;
+  const partes = rutaSinDominio.split("/");
+  const nombre_producto = decodeURIComponent(partes[2]);
 
-  }, []);
+  const productos = data;
+
+  const data_producto = [];
+
+  const obtener_datos = () => {
+    for (let index = 0; index < productos.length; index++) {
+       if (productos[index].nombre == nombre_producto){
+        data_producto.push({
+          nombre: productos[index].nombre,
+          foto: productos[index].foto,
+          precio: productos[index].precio,
+          referencia: productos[index].referencia        
+        });
+        
+       }
+    }
+  }
+  obtener_datos();
+
+  useEffect(() => {   
+    toast.message('Detalles de: ', {
+      description: nombre_producto
+    });
+  }, [nombre_producto]);
   return (
     <MainLayout>
      <div className={styles.content_indicador_ruta}>
-
+      <div className={styles.div_indicador_ruta}>
+        HUSHPUPPIESCO / CALZADO / {nombre_producto}
+      </div>
      </div>
      <div className={styles.content_fotos_talla}>
+      <div className={styles.content_fotos_talla_columns}>
+        <div className={styles.content_fotos}>
+          <div className={styles.div_fotos_principal}>
+            <div className={styles.div_fotos_principal_img}>
+              <Image src={`/img/${data_producto[0].foto}`} width={400} height={400} alt={`Imagen de ${data_producto[0].nombre}`} className={styles.img_principal}/>              
+            </div>
+          </div>
+          <div className={styles.div_fotos_imgs_adicionales}>
+              <div className={styles.div_fotos_imgs}>
+                <Image src={`/img/${data_producto[0].foto}`} width={100} height={100} alt={`Imagen de ${data_producto[0].nombre}`} className={styles.img_principal}/> 
+              </div>
+              <div className={styles.div_fotos_imgs}>
+                <Image src={`/img/${data_producto[0].foto}`} width={100} height={100} alt={`Imagen de ${data_producto[0].nombre}`} className={styles.img_principal}/>
+              </div>
+              <div className={styles.div_fotos_imgs}>
+                <Image src={`/img/${data_producto[0].foto}`} width={100} height={100} alt={`Imagen de ${data_producto[0].nombre}`} className={styles.img_principal}/>
+              </div>
+              <div className={styles.div_fotos_imgs}>
+                <Image src={`/img/${data_producto[0].foto}`} width={100} height={100} alt={`Imagen de ${data_producto[0].nombre}`} className={styles.img_principal}/>
+              </div>
+              <div className={styles.div_fotos_imgs}>
+                <Image src={`/img/${data_producto[0].foto}`} width={100} height={100} alt={`Imagen de ${data_producto[0].nombre}`} className={styles.img_principal}/>
+              </div>
+          </div>
+        </div>
+        <div className={styles.content_talla}>
 
+        </div>
+      </div>
      </div>
      <div className={styles.content_detalles_producto}>
 
@@ -30,6 +86,7 @@ const DetallePage = () => {
      <div className={styles.content_productos_recomendados}>
 
      </div>
+     <Toaster/>
     </MainLayout>
   );
 };

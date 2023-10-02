@@ -2,18 +2,93 @@
 
 // content indicador ruta
 .content_indicador_ruta{
-    width: 100%;
-    height: 7vh;
+    width: 100%;    
     background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.div_indicador_ruta{
+    width: 90%;
+    height: 6vh;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 // content indicador ruta
 
 // content fotos talla
 .content_fotos_talla{
+    width: 100%;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content_fotos_talla_columns{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.content_fotos{
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.content_talla{
+    width: 50%;
+    height: 80vh;
+    background-color:antiquewhite;
+}
+.div_fotos_principal{
     width: 100%;
-    height: 70vh;
-    background-color: red;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid $color_5;
+}
+.div_fotos_principal_img{
+    width: 80%;
+    height: 90%;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img_principal{
+    width: 80%; 
+    height: 100%;
+    object-fit: cover; 
+    position: absolute;
+    z-index: 2;
+}
+.div_fotos_imgs_adicionales{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.div_fotos_imgs{
+    width: 17%;
+    height: 80%;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 // content fotos talla
 
@@ -48,3 +123,20 @@
     background-color: gray;
 }
 // content productos recomendados
+
+@media (max-width: 750px) {
+    .content_fotos_talla_columns{
+        flex-direction: column;
+    }
+    .content_fotos{
+        width: 100%;
+        height: 50vh;
+    }
+    .content_talla{
+        width: 100%;
+        height: 50vh;
+    }
+    .img_principal{
+        width: 100%;
+    }
+}
