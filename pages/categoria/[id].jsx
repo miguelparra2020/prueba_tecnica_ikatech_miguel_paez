@@ -15,13 +15,6 @@ const DetallePage = () => {
   const nombre_producto = decodeURIComponent(partes[2]);
   const productos = data;
   const [data_producto, setDataProducto] = useState([]);
-  
-  const producto_precio = (data_producto.precio).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
- 
-
-  
-
-
 
   const incremetarAlert = () => {
     toast.success('Ha añadido al carrito el producto: ', {
@@ -59,8 +52,6 @@ const DetallePage = () => {
       description: nombre_producto
     });
   }, [nombre_producto, productos]);
-
-    console.log(producto_precio)
   return (
     <MainLayout>
      <div className={styles.content_indicador_ruta}>
@@ -100,7 +91,7 @@ const DetallePage = () => {
                 {data_producto.nombre}
               </div>
               <div className={styles.detalle_precio}>
-                ${producto_precio}
+                ${data_producto.precio}
               </div>
               <div className={styles.detalle_codigo}>
                 Código del producto {data_producto.referencia}
