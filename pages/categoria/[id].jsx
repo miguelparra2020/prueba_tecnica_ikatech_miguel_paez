@@ -67,7 +67,7 @@ const DetallePage = () => {
         HUSHPUPPIESCO / CALZADO / {nombre_producto}
       </div>
      </div>
-     <div className={styles.content_fotos_talla}>
+     {/* <div className={styles.content_fotos_talla}>
       <div className={styles.content_fotos_talla_columns}>
         <div className={styles.content_fotos}>
           <div className={styles.div_fotos_principal}>
@@ -166,7 +166,7 @@ const DetallePage = () => {
             </div>
         </div>
       </div>
-     </div>
+     </div> */}
      <div className={styles.content_detalles_producto}>
      </div>
      <div className={styles.content_tecnologias}>
