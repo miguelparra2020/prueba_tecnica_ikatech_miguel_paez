@@ -13,9 +13,11 @@ import { Toaster, toast } from 'sonner';
   
 
 const CategoriaPage = () => {
-  console.log(data);
+  
   useEffect(() => {   
-
+    toast.success('Catagorías', {
+      description: 'Escoge la que más te guste!'
+    });
   }, []);
   return (
     <MainLayout>
@@ -68,9 +70,8 @@ const CategoriaPage = () => {
         </div>
       </div>
       <div>
-      
-        {/* <CardProducto nombre={nombre} /> */}
       </div>
+      <Toaster/>
     </MainLayout>
   );
 };

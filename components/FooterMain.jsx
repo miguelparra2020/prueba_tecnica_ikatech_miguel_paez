@@ -37,28 +37,28 @@ const FooterMain = () => {
       </div>
       <div className={styles.content_footer_menu}>
         <div className={styles.div_footer_column}>
-          <Link href="/servicioalcliente" className={`${styles.button_link}`}>
+          <Link href="/categoria" className={`${styles.button_link}`}>
             <div className={styles.div_footer_column_title}>
               SERVICIO AL CLIENTE
             </div>
           </Link>
           <div className={styles.div_footer_column_links}>
-            <Link href="/servicioalcliente" className={styles.button_link}>
+            <Link href="/categoria" className={styles.button_link}>
               <div className={styles.div_footer_column_links_item}>
                 CONTÁCTENOS
               </div>
             </Link>
-            <Link href="/servicioalcliente" className={styles.button_link}>
+            <Link href="/categoria" className={styles.button_link}>
               <div className={styles.div_footer_column_links_item}>
                 CAMBIOS Y DEVOLUCIONES
               </div>
             </Link>
-            <Link href="/servicioalcliente" className={styles.button_link}>
+            <Link href="/categoria" className={styles.button_link}>
               <div className={styles.div_footer_column_links_item}>
                 POLÍTICAS DE LA TIENDA
               </div>
             </Link>
-            <Link href="/servicioalcliente" className={styles.button_link}>
+            <Link href="/categoria" className={styles.button_link}>
               <div className={styles.div_footer_column_links_item}>
                 POLÍTICAS DE DATOS
               </div>
@@ -66,18 +66,18 @@ const FooterMain = () => {
           </div>
         </div>
         <div className={styles.div_footer_column}>
-          <Link href="/micuenta" className={styles.button_link}>
+          <Link href="/categoria" className={styles.button_link}>
             <div className={styles.div_footer_column_title}>
               MI CUENTA
             </div>
           </Link>
           <div className={styles.div_footer_column_links}>
-            <Link href="/micuenta" className={styles.button_link}>
+            <Link href="/categoria" className={styles.button_link}>
               <div className={styles.div_footer_column_links_item}>
                 MIS PEDIDOS
               </div>
             </Link>
-            <Link href="/micuenta" className={styles.button_link}>
+            <Link href="/categoria" className={styles.button_link}>
               <div className={styles.div_footer_column_links_item}>
                 MIS DEVOLUCIONES
               </div>
@@ -85,18 +85,18 @@ const FooterMain = () => {
           </div>
         </div>
         <div className={styles.div_footer_column}>        
-          <Link href="/directoriotiendas" className={styles.button_link}>
+          <Link href="/categoria" className={styles.button_link}>
             <div className={styles.div_footer_column_title}>
               RECURSOS
             </div>
           </Link>
           <div className={styles.div_footer_column_links}>
-            <Link href="/directoriotiendas" className={styles.button_link}>
+            <Link href="/categoria" className={styles.button_link}>
               <div className={styles.div_footer_column_links_item}>
                 TIENDAS
               </div>
             </Link>
-            <Link href="/directoriotiendas" className={styles.button_link}>
+            <Link href="/categoria" className={styles.button_link}>
               <div className={styles.div_footer_column_links_item}>
                 DEVOLUCIONES
               </div>
