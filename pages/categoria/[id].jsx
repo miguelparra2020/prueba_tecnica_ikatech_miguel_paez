@@ -34,7 +34,7 @@ const DetallePage = () => {
   function formatNumberWithCommas(number) {
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
   }
-  
+
   useEffect(() => {   
     toast.message('Detalles de: ', {
       description: nombre_producto
@@ -81,11 +81,11 @@ const DetallePage = () => {
               <div className={styles.detalle_precio}>
                 ${formatNumberWithCommas(data_producto[0].precio)}
               </div>
-              <div className={styles.detalle_precio}>
+              <div className={styles.detalle_codigo}>
                 Código del producto {data_producto[0].referencia}
               </div>
-              <div className={styles.detalle_precio}>
-                <div>
+              <div className={styles.detalle_color}>
+                <div className={styles.detalle_color_titulo}>
                   COLOR
                 </div>
                 <div className={styles.detalle_color_img}>

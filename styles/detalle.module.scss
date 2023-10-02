@@ -97,8 +97,41 @@
 .div_talla{
     width: 80%;
     height: 80vh;
-    background-color: aquamarine;
 }
+.detalle_nombre{
+    width: 100%;
+    font-weight: 900;
+    font-size: 38px;
+    color: $color_26;
+}
+.detalle_precio{
+    width: 100%;
+    font-family: 'glyphicons-halflings-regular', sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+    color: $color_27;
+}
+.detalle_codigo{
+    width: 100%;
+    font-family: 'glyphicons-halflings-regular', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: $color_28;
+}
+.detalle_color{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.detalle_color_titulo{
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.detalle_color_img{
+    border: 1.6px solid rgba(163, 166, 168, 0.8);
+}
+
 .detalle_color_img{
     width: 80px;
     height: 80px;
@@ -160,7 +193,7 @@
     }
     .content_talla{
         width: 100%;
-        height: 50vh;
+        height: 80vh;
     }
     .img_principal{
         width: 100%;
