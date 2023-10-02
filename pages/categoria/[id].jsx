@@ -1,7 +1,7 @@
 // pages/index.js
 import React, { useEffect,useState } from 'react';
 import  MainLayout from '../../components/layouts/MainLayout';
-import styles from '../../styles/detalle.module.scss'
+import styles from '../../styles/detalle.module.scss';
 import Image from 'next/image';
 import data from '../../data/data.jsx';
 import IncrementarButton from '../../components/IncrementarButton';
@@ -10,11 +10,19 @@ import DecrementarButton from '../../components/DecrementarButton';
 import { Toaster, toast } from 'sonner';
 
 const DetallePage = () => {
+
   const [ruta, setRuta] = useState('');
   const partes = ruta.split("/");
   const nombre_producto = decodeURIComponent(partes[2]);
   const productos = data;
   const [data_producto, setDataProducto] = useState([]);
+
+  const [productos_completar, setProductosCompletar] = useState([]);
+  const [productos_recomendados, setProductosRecomendados] = useState([]);
+
+  function formatNumberWithCommas(number) {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  }
 
   const incremetarAlert = () => {
     toast.success('Ha añadido al carrito el producto: ', {
@@ -48,10 +56,32 @@ const DetallePage = () => {
         referencia: ''
       });
     }
+
+    function obtenerProductosAleatorios(productos, cantidad) {
+      const copiaProductos = [...productos]; 
+      const productosAleatorios = [];
+    
+      while (productosAleatorios.length < cantidad && copiaProductos.length > 0) {
+        const indiceAleatorio = Math.floor(Math.random() * copiaProductos.length);
+        const productoAleatorio = copiaProductos.splice(indiceAleatorio, 1)[0]; // Eliminar y obtener el elemento aleatorio
+        productosAleatorios.push(productoAleatorio);
+      }
+    
+      return productosAleatorios;
+    }
+
+
+    setProductosCompletar(obtenerProductosAleatorios(productos, 4));
+    setProductosRecomendados(obtenerProductosAleatorios(productos, 4));
+
     toast.message('Detalles de: ', {
       description: nombre_producto
     });
   }, [nombre_producto, productos]);
+
+  console.log("Completar:", productos_completar);
+  console.log("Recomendados:", productos_recomendados);
+
   return (
     <MainLayout>
      <div className={styles.content_indicador_ruta}>
@@ -180,6 +210,48 @@ const DetallePage = () => {
       </div>
       </div>
      <div className={styles.content_completa_look}>
+      <div className={styles.div_completa_look}>
+        <div className={styles.div_completa_look_titulo}>
+          &nbsp; COMPLETA TU LOOK
+        </div>
+        <div className={styles.content_divs_productos_completar_look}>
+            
+              {
+                productos_completar.map((item) => (                  
+                    <div key={item} className={styles.content_card_producto_completar}>
+                      <div className={styles.div_card_producto}>                
+                    <div className={styles.div_card_producto_img_principal}>
+                      <Image src={`/img/${item.foto}`} width={300} height={300} alt={`Imagen de ${item.nombre}`} className={styles.img_principal}/>
+                    </div>
+                    <div className={styles.div_card_producto_imgs_carrusel}>
+                      <div className={styles.div_card_producto_imgs_carrusel_peque}>
+                      <Image src={`/img/${item.foto}`} width={100} height={100}alt={`Imagen de  ${item.nombre}`} className={styles.imgs_carrusel_peque}/>
+                      </div>
+                      <div className={styles.div_card_producto_imgs_carrusel_peque}>
+                      <Image src={`/img/${item.foto}`} width={100} height={100}alt={`Imagen de  ${item.nombre}`} className={styles.imgs_carrusel_peque}/>
+                      </div>
+                      <div className={styles.div_card_producto_imgs_carrusel_peque}>
+                      <Image src={`/img/${item.foto}`} width={100} height={100}alt={`Imagen de  ${item.nombre}`} className={styles.imgs_carrusel_peque}/>
+                      </div>
+                    </div>
+                    <div className={styles.div_card_producto_nombre}>
+                      {item.nombre}
+                    </div>
+                    <div className={styles.div_card_producto_precio}>
+                    ${formatNumberWithCommas(item.precio)}
+                    </div>
+
+                      <div onClick={incremetarAlert} className={styles.div_button_anadir}>
+                      <IncrementarButton />
+                      </div>
+                      </div>
+                      
+                    </div>                  
+                ))
+              }
+        </div>
+      </div>
+      
 
      </div>
      <div className={styles.content_productos_recomendados}>

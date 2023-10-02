@@ -278,19 +278,139 @@
 }
 // content detalles producto
 
-// content tecnologias
-.content_tecnologias{
-    width: 100%;
-    height: 30vh;
-    background-color:antiquewhite;
-}
-// content tecnologias 
-
 // content completa look
 .content_completa_look{
     width: 100%;
-    height: 40vh;
-    background-color: orange;
+    margin-top: 20PX;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.div_completa_look{
+    width: 90%;       
+}
+.div_completa_look_titulo{
+    width: 100%;
+    height: 4vh;
+    font-weight: 600;
+    font-size: 20px;
+    background-color: $color_13;
+    color: $color_32;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.content_divs_productos_completar_look{
+    width: 100%;    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.content_card_producto_completar{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.div_card_producto_completar{
+    width: 90%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content_card{
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.div_card_producto{
+    all: unset;
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+
+}
+.div_card_producto_img_principal{
+    width: 100%;
+    height: 35vh;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.img_principal{
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+    position: absolute;
+    z-index: 2;
+}
+.div_favorito{
+    margin-top: 10px;
+    margin-right: 10px;
+    position: absolute; 
+    z-index: 3;
+    color: $color_18;
+}
+.div_card_producto_imgs_carrusel{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+}
+.div_card_producto_nombre{
+    width: 100%;
+    height: 7vh;
+    font-family: 'glyphicons-halflings-regular', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: $color_19;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.div_card_producto_precio{
+    width: 100%;
+    height: 7vh;
+    font-family: 'glyphicons-halflings-regular', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: $color_20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.div_card_producto_imgs_carrusel_peque{
+    width: 33%;
+    height: 12vh;
+    position: relative;
+    overflow: hidden;
+}
+.imgs_carrusel_peque{
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+}
+.button_link{
+    all: unset;
+    cursor: pointer;
+}
+.div_button_anadir{
+    width: 100%;
 }
 // content completa look
 
@@ -300,6 +420,7 @@
     height: 40vh;
     background-color: gray;
 }
+
 // content productos recomendados
 
 
@@ -325,6 +446,12 @@
         width: 100%;
     }
     .detalle_talla_opcion_2{
+        width: 100%;
+    }
+    .content_divs_productos_completar_look{
+        flex-direction: column;
+    }
+    .content_card_producto_completar{
         width: 100%;
     }
 }
