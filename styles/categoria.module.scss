@@ -3,14 +3,12 @@
 // content headers
 .content_headers{
     width: 100%;
-    background-color: yellow;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .div_headers{
     width: 90%;
-    background-color: blue;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -18,36 +16,42 @@
 }
 .content_indicador_ruta{
     width: 25%;
-    background-color: green;
     display: flex;
     flex-direction: column;
 }
     .div_indicador_ruta{
         width: 100%;
         height: 8vh;
-        background-color:aqua ;
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        font-family: 'glyphicons-halflings-regular', sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        color: $color_21;
     }
     .div_indicador_ruta_titulo{
         width: 100%;
         height: 8vh;
-        background-color: antiquewhite;
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        
+        font-weight: 700;
+        font-size: 40px;
+        color: $color_21;
     }
 .content_ordenar_por{
     width: 25%;
-    background-color: orange;
     display: flex;
     flex-direction: column;
+    color: $color_22;
+    font-weight: 500;
+    font-size: 18px;
 }
     .div_ordenar_por{
         width: 100%;
         height: 8vh;
-        background-color:cadetblue;
         display: flex;
         align-items: center;
         justify-content: flex-start;
@@ -55,7 +59,6 @@
     .div_ordenar_por_opcion{
         width: 100%;
         height: 8vh;
-        background-color:coral;
         display: flex;
         align-items: center;
         justify-content: flex-start;
@@ -69,7 +72,6 @@
     .div_filtrar_por{
         width: 100%;
         height: 8vh;
-        background-color:cyan;
         display: flex;
         align-items: center;
         justify-content: flex-start;
@@ -78,7 +80,6 @@
     .div_filtrar_por_contenido{
         width: 100%;
         height: 8vh;
-        background-color:darkseagreen;
         display: flex;
         align-items: center;
         justify-content: flex-start;
@@ -87,6 +88,9 @@
 
 .content_articulos_pagina{
     width: 25%;
+    color: $color_22;
+    font-weight: 500;
+    font-size: 18px;
     
 }
     .div_articulos_pagina{
