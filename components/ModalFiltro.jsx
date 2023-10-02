@@ -19,11 +19,10 @@ const ModalFiltro = ({ isOpen, closeModal }) => {
 
   const contentStyles = {
     position: 'absolute',
-    top: '50%',
+    top: '60%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: '90%', 
-    height: '150vh', 
     maxWidth: '600px',
     backgroundColor: 'white',
     padding: '20px',
