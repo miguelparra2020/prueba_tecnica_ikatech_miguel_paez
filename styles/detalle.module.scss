@@ -300,6 +300,17 @@
     align-items: center;
     justify-content: flex-start;
 }
+.div_completa_look_titulo_2{
+    width: 100%;
+    height: 4vh;
+    font-weight: 600;
+    font-size: 20px;
+    color: $color_32;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 2px solid $color_5;
+}
 .content_divs_productos_completar_look{
     width: 100%;    
     display: flex;
@@ -393,6 +404,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.div_card_producto_precio_2{
+    width: 100%;
+    height: 7vh;
+    font-family: 'glyphicons-halflings-regular', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: $color_20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid $color_5;
 }
 .div_card_producto_imgs_carrusel_peque{
     width: 33%;

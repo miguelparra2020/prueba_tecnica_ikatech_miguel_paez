@@ -254,8 +254,45 @@ const DetallePage = () => {
       
 
      </div>
-     <div className={styles.content_productos_recomendados}>
+     <div className={styles.content_completa_look}>
+      <div className={styles.div_completa_look}>
+        <div className={styles.div_completa_look_titulo_2}>
+          PRODUCTOS RECOMENDADOS
+        </div>
+        <div className={styles.content_divs_productos_completar_look}>
+            
+              {
+                productos_recomendados.map((item) => (                  
+                    <div key={item} className={styles.content_card_producto_completar}>
+                      <div className={styles.div_card_producto}>                
+                    <div className={styles.div_card_producto_img_principal}>
+                      <Image src={`/img/${item.foto}`} width={300} height={300} alt={`Imagen de ${item.nombre}`} className={styles.img_principal}/>
+                    </div>
+                    <div className={styles.div_card_producto_imgs_carrusel}>
+                      <div className={styles.div_card_producto_imgs_carrusel_peque}>
+                      <Image src={`/img/${item.foto}`} width={100} height={100}alt={`Imagen de  ${item.nombre}`} className={styles.imgs_carrusel_peque}/>
+                      </div>
+                      <div className={styles.div_card_producto_imgs_carrusel_peque}>
+                      <Image src={`/img/${item.foto}`} width={100} height={100}alt={`Imagen de  ${item.nombre}`} className={styles.imgs_carrusel_peque}/>
+                      </div>
+                      <div className={styles.div_card_producto_imgs_carrusel_peque}>
+                      <Image src={`/img/${item.foto}`} width={100} height={100}alt={`Imagen de  ${item.nombre}`} className={styles.imgs_carrusel_peque}/>
+                      </div>
+                    </div>
+                    <div className={styles.div_card_producto_nombre}>
+                      {item.nombre}
+                    </div>
+                    <div className={styles.div_card_producto_precio_2}>
+                    ${formatNumberWithCommas(item.precio)}
+                    </div>
 
+                      </div>
+                      
+                    </div>                  
+                ))
+              }
+        </div>
+      </div>    
      </div>
      <Toaster/>
     </MainLayout>
