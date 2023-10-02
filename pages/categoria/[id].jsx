@@ -160,10 +160,25 @@ const DetallePage = () => {
       </div>
      </div>
      <div className={styles.content_detalles_producto}>
+      <div className={styles.div_detalles_producto}>
+        <div className={styles.div_detalles_producto_titulo}>
+          DESTALLES DE PRODUCTO
+        </div>
+        <div className={styles.div_detalles_producto_parrafo}>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta, ea nam quibusdam molestiae iusto, voluptatibus, in libero et natus repudiandae exercitationem culpa quam quae molestias. Sequi voluptas nesciunt deserunt explicabo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo expedita placeat accusamus earum eum optio vel tenetur molestiae, repellat eligendi quae quibusdam! Consequuntur suscipit placeat omnis. Incidunt optio libero modi!
+        </div>
+      </div>
      </div>
-     <div className={styles.content_tecnologias}>
-        <IncrementarButton/>
-     </div>
+     <div className={styles.content_detalles_producto}>
+     <div className={styles.div_detalles_producto}>
+        <div className={styles.div_detalles_producto_titulo}>
+          TECNOLOGÍAS
+        </div>
+        <div className={styles.div_detalles_producto_parrafo}>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta, ea nam quibusdam molestiae iusto, voluptatibus, in libero et natus repudiandae exercitationem culpa quam quae molestias. Sequi voluptas nesciunt deserunt explicabo! Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        </div>
+      </div>
+      </div>
      <div className={styles.content_completa_look}>
 
      </div>
