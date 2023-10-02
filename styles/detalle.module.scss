@@ -3,7 +3,6 @@
 // content indicador ruta
 .content_indicador_ruta{
     width: 100%;    
-    background-color: yellow;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,10 +10,14 @@
 .div_indicador_ruta{
     width: 90%;
     height: 6vh;
-    background-color: blue;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    color: $color_17;
+    font-family: 'glyphicons-halflings-regular', sans-serif;
+    font-weight: 550;
+    font-size: 14px;
+    opacity: 0.8;
 }
 
 // content indicador ruta
@@ -41,11 +44,7 @@
     align-items: center;
     justify-content: center;
 }
-.content_talla{
-    width: 50%;
-    height: 80vh;
-    background-color:antiquewhite;
-}
+
 .div_fotos_principal{
     width: 100%;
     height: 80%;
@@ -57,7 +56,6 @@
 .div_fotos_principal_img{
     width: 80%;
     height: 90%;
-    background-color: white;
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -89,6 +87,34 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.content_talla{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.div_talla{
+    width: 80%;
+    height: 80vh;
+    background-color: aquamarine;
+}
+.detalle_color_img{
+    width: 80px;
+    height: 80px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img_color{
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+    position: absolute;
+    z-index: 2;
 }
 // content fotos talla
 
@@ -137,6 +163,9 @@
         height: 50vh;
     }
     .img_principal{
+        width: 100%;
+    }
+    .div_talla{
         width: 100%;
     }
 }

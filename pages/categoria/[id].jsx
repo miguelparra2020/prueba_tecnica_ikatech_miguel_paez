@@ -31,6 +31,10 @@ const DetallePage = () => {
   }
   obtener_datos();
 
+  function formatNumberWithCommas(number) {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  }
+  
   useEffect(() => {   
     toast.message('Detalles de: ', {
       description: nombre_producto
@@ -70,7 +74,43 @@ const DetallePage = () => {
           </div>
         </div>
         <div className={styles.content_talla}>
+            <div className={styles.div_talla}>
+              <div className={styles.detalle_nombre}>
+                {data_producto[0].nombre}
+              </div>
+              <div className={styles.detalle_precio}>
+                ${formatNumberWithCommas(data_producto[0].precio)}
+              </div>
+              <div className={styles.detalle_precio}>
+                Código del producto {data_producto[0].referencia}
+              </div>
+              <div className={styles.detalle_precio}>
+                <div>
+                  COLOR
+                </div>
+                <div className={styles.detalle_color_img}>
+                  <Image src={`/img/${data_producto[0].foto}`} width={100} height={100} alt={`Imagen de ${data_producto[0].nombre}`} className={styles.img_color}/>
+                </div>
+              </div>
+              <div className={styles.detalle_talla}>
+                TALLA
+              </div>
+              <div className={styles.detalle_talla_opciones}>
+                OPCIONES TALLA
+              </div>
+              <div className={styles.detalle_talla}>
+                GUÍA DE TALLAS
+              </div>
+              <div className={styles.detalle_talla}>
+                <div>
+                  AÑADIR AL CARRITO
+                </div>
+                <div>
+                  favorito
+                </div>
+              </div>
 
+            </div>
         </div>
       </div>
      </div>
