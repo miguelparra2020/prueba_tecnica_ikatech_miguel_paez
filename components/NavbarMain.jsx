@@ -3,9 +3,9 @@ import React, {useState, useEffect} from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from '../styles/NavbarMain.module.scss';
+import CounterValue from './CounterValue';
 
 const NavbarMain = () => {
-  const [cantidadCarrito, setCantidadCarrito] = useState(0);
   
   useEffect(() => {
   
@@ -68,7 +68,7 @@ const NavbarMain = () => {
                         CARRITO
                       </div>&nbsp;&nbsp;
                       <div>
-                        {cantidadCarrito}
+                        <CounterValue/>
                       </div>
                       
                   </div>
@@ -127,7 +127,7 @@ const NavbarMain = () => {
               &nbsp;&nbsp;
               <Link href="/categoria" className={`${styles.button_link}`}>
               <div className={styles.efecto_menu_2}>
-                {cantidadCarrito}
+                <CounterValue/>
               </div>
               </Link>            
           </div>          

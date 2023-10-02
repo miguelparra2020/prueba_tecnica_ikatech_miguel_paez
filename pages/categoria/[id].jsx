@@ -4,6 +4,8 @@ import  MainLayout from '../../components/layouts/MainLayout';
 import styles from '../../styles/detalle.module.scss'
 import Image from 'next/image';
 import data from '../../data/data.jsx';
+import IncrementarButton from '../../components/IncrementarButton';
+import DecrementarButton from '../../components/DecrementarButton';
 
 import { Toaster, toast } from 'sonner';
 
@@ -33,6 +35,17 @@ const DetallePage = () => {
 
   function formatNumberWithCommas(number) {
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  }
+
+  const incremetarAlert = () => {
+    toast.success('Ha añadido al carrito el producto: ', {
+      description: nombre_producto
+    });
+  }
+  const decrementarAlert = () => {
+    toast.message('Ha retirado del carrito el producto: ', {
+      description: nombre_producto
+    });
   }
 
   useEffect(() => {   
@@ -135,13 +148,11 @@ const DetallePage = () => {
                 GUÍA DE TALLAS
               </div>
               <div className={styles.detalle_carrito}>
-                <button className={styles.detalle_carrito_anadir}>
-                    AÑADIR AL CARRITO
-                </button>
-                <div className={styles.detalle_carrito_favorito}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-</svg>
+                <div className={styles.div_detalle_carrito_anadir} onClick={incremetarAlert}>
+                  <IncrementarButton/>
+                </div>
+                <div className={styles.detalle_carrito_favorito} onClick={decrementarAlert}>
+                  <DecrementarButton/>
                 </div>
               </div>
 
@@ -150,10 +161,9 @@ const DetallePage = () => {
       </div>
      </div>
      <div className={styles.content_detalles_producto}>
-
      </div>
      <div className={styles.content_tecnologias}>
-
+        <IncrementarButton/>
      </div>
      <div className={styles.content_completa_look}>
 
