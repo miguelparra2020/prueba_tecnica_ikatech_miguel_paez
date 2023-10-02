@@ -3,10 +3,7 @@ import React, { useEffect, useState } from 'react';
 import  MainLayout from '../components/layouts/MainLayout';
 import styles from '../styles/index.module.scss';
 import Link from 'next/link';
-import Image from 'next/image';
 import ModalVideo from '../components/ModalVideo'
-
-import { Toaster, toast } from 'sonner';
 
 const LandPage = () => {
 

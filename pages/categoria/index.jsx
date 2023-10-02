@@ -1,18 +1,26 @@
 // pages/index.js
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import  MainLayout from '../../components/layouts/MainLayout';
 import styles from '../../styles/categoria.module.scss';
 import Flitros from '../../components/FiltrosProductos';
 import data from '../../data/data.jsx';
 import CardProducto from '../../components/CardProducto';
-
-import Image from 'next/image';
+import ModalFiltro from '../../components/ModalFiltro'
 
 import { Toaster, toast } from 'sonner';
 
   
 
 const CategoriaPage = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
   
   useEffect(() => {   
     toast.success('Catagorías', {
@@ -40,9 +48,16 @@ const CategoriaPage = () => {
             </div>
           </div>
           <div className={styles.content_filtrar_movil}>
+                  {isModalOpen && (
+                <ModalFiltro isOpen={isModalOpen} closeModal={closeModal}>
+                 
+                </ModalFiltro>
+              )}
+              <button onClick={openModal}>
               <div className={styles.div_filtrar_por}>
                 FILTRAR POR
               </div>
+              </button>
               <div  className={styles.div_filtrar_por_contenido}>
                 CONTENIDO DEL FILTRO MOVIL
               </div>
