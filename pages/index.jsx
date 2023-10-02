@@ -9,6 +9,7 @@ import ModalVideo from '../components/ModalVideo'
 import { Toaster, toast } from 'sonner';
 
 const LandPage = () => {
+
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -23,7 +24,6 @@ const LandPage = () => {
   }, []);
   return (
     <MainLayout>
-      <button onClick={openModal}>Abrir Modal</button>
       {isModalOpen && (
         <ModalVideo isOpen={isModalOpen} closeModal={closeModal}>
           <div className="modal-content">
@@ -43,7 +43,7 @@ const LandPage = () => {
           </div>
           <div className={styles.div_banner_1_divisor_2}>
             <button className={styles.buttons}>
-            <Link href="/carrito" className={styles.button_link}>
+            <Link href="/categoria" className={styles.button_link}>
               <div className={styles.div_button_shop_now}>
                   SHOP NOW
               </div>
@@ -84,7 +84,7 @@ const LandPage = () => {
      {/* Banner 2 */}
      <div className={styles.content_banner_2}>
       <div className={styles.div_banner_2}>
-        <button className={styles.buttons}>
+        <button className={styles.buttons} onClick={openModal}>
           <div className={styles.div_button_banner_2}>
             <div className={styles.div_triangle_play}>
             </div>
