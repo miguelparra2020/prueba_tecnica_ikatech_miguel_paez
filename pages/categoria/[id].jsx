@@ -1,5 +1,5 @@
 // pages/index.js
-import React, { useEffect } from 'react';
+import React, { useEffect,useState } from 'react';
 import  MainLayout from '../../components/layouts/MainLayout';
 import styles from '../../styles/detalle.module.scss'
 import Image from 'next/image';
@@ -10,8 +10,9 @@ import DecrementarButton from '../../components/DecrementarButton';
 import { Toaster, toast } from 'sonner';
 
 const DetallePage = () => {
-  const rutaSinDominio = window.location.pathname;
-  const partes = rutaSinDominio.split("/");
+  const [ruta, setRuta] = useState('');
+  
+  const partes = ruta.split("/");
   const nombre_producto = decodeURIComponent(partes[2]);
 
   const productos = data;
@@ -19,6 +20,7 @@ const DetallePage = () => {
   const data_producto = [];
 
   const obtener_datos = () => {
+
     for (let index = 0; index < productos.length; index++) {
        if (productos[index].nombre == nombre_producto){
         data_producto.push({
@@ -49,6 +51,9 @@ const DetallePage = () => {
   }
 
   useEffect(() => {   
+    const ruta = window.location.pathname;
+    setRuta(ruta);
+
     toast.message('Detalles de: ', {
       description: nombre_producto
     });
