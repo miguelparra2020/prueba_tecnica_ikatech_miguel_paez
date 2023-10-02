@@ -15,7 +15,11 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    
 
+}
+.div_card_producto:hover{
+    background-color: $color_18;
 }
 .div_card_producto_img_principal{
     width: 100%;
@@ -70,6 +74,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-bottom: 2px solid $color_5;
 }
 .div_card_producto_imgs_carrusel_peque{
     width: 33%;
