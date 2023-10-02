@@ -13,31 +13,15 @@ const DetallePage = () => {
   const [ruta, setRuta] = useState('');
   const partes = ruta.split("/");
   const nombre_producto = decodeURIComponent(partes[2]);
-  
-  
   const productos = data;
+  const [data_producto, setDataProducto] = useState([]);
+  
+  const producto_precio = (data_producto.precio).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+ 
 
-  const data_producto = [];
+  
 
-  const obtener_datos = () => {
 
-    for (let index = 0; index < productos.length; index++) {
-       if (productos[index].nombre == nombre_producto){
-        data_producto.push({
-          nombre: productos[index].nombre,
-          foto: productos[index].foto,
-          precio: productos[index].precio,
-          referencia: productos[index].referencia        
-        });
-        
-       }
-    }
-  }
-  obtener_datos();
-
-  function formatNumberWithCommas(number) {
-    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-  }
 
   const incremetarAlert = () => {
     toast.success('Ha añadido al carrito el producto: ', {
@@ -54,12 +38,29 @@ const DetallePage = () => {
     const ruta = window.location.pathname;
     setRuta(ruta);
 
+    const filteredProducts = productos.filter(producto => producto.nombre === nombre_producto);
+    if (filteredProducts.length > 0) {
+      const producto = filteredProducts[0];
+      setDataProducto({
+        nombre: producto.nombre,
+        foto: producto.foto,
+        precio: producto.precio,
+        referencia: producto.referencia
+      });
+    } else {
+      setDataProducto({
+        nombre: '',
+        foto: '',
+        precio: '',
+        referencia: ''
+      });
+    }
     toast.message('Detalles de: ', {
       description: nombre_producto
     });
-  }, [nombre_producto]);
+  }, [nombre_producto, productos]);
 
-    console.log(productos)
+    console.log(producto_precio)
   return (
     <MainLayout>
      <div className={styles.content_indicador_ruta}>
@@ -67,49 +68,49 @@ const DetallePage = () => {
         HUSHPUPPIESCO / CALZADO / {nombre_producto}
       </div>
      </div>
-     {/* <div className={styles.content_fotos_talla}>
+     <div className={styles.content_fotos_talla}>
       <div className={styles.content_fotos_talla_columns}>
         <div className={styles.content_fotos}>
           <div className={styles.div_fotos_principal}>
             <div className={styles.div_fotos_principal_img}>
-              <Image src={`/img/${data_producto[0].foto}`} width={400} height={400} alt={`Imagen de ${data_producto[0].nombre}`} className={styles.img_principal}/>              
+              <Image src={`/img/${data_producto.foto}`} width={400} height={400} alt={`Imagen de ${data_producto.nombre}`} className={styles.img_principal}/>              
             </div>
           </div>
           <div className={styles.div_fotos_imgs_adicionales}>
               <div className={styles.div_fotos_imgs}>
-                <Image src={`/img/${data_producto[0].foto}`} width={100} height={100} alt={`Imagen de ${data_producto[0].nombre}`} className={styles.img_principal}/> 
+                <Image src={`/img/${data_producto.foto}`} width={100} height={100} alt={`Imagen de ${data_producto.nombre}`} className={styles.img_principal}/> 
               </div>
               <div className={styles.div_fotos_imgs}>
-                <Image src={`/img/${data_producto[0].foto}`} width={100} height={100} alt={`Imagen de ${data_producto[0].nombre}`} className={styles.img_principal}/>
+                <Image src={`/img/${data_producto.foto}`} width={100} height={100} alt={`Imagen de ${data_producto.nombre}`} className={styles.img_principal}/>
               </div>
               <div className={styles.div_fotos_imgs}>
-                <Image src={`/img/${data_producto[0].foto}`} width={100} height={100} alt={`Imagen de ${data_producto[0].nombre}`} className={styles.img_principal}/>
+                <Image src={`/img/${data_producto.foto}`} width={100} height={100} alt={`Imagen de ${data_producto.nombre}`} className={styles.img_principal}/>
               </div>
               <div className={styles.div_fotos_imgs}>
-                <Image src={`/img/${data_producto[0].foto}`} width={100} height={100} alt={`Imagen de ${data_producto[0].nombre}`} className={styles.img_principal}/>
+                <Image src={`/img/${data_producto.foto}`} width={100} height={100} alt={`Imagen de ${data_producto.nombre}`} className={styles.img_principal}/>
               </div>
               <div className={styles.div_fotos_imgs}>
-                <Image src={`/img/${data_producto[0].foto}`} width={100} height={100} alt={`Imagen de ${data_producto[0].nombre}`} className={styles.img_principal}/>
+                <Image src={`/img/${data_producto.foto}`} width={100} height={100} alt={`Imagen de ${data_producto.nombre}`} className={styles.img_principal}/>
               </div>
           </div>
         </div>
         <div className={styles.content_talla}>
             <div className={styles.div_talla}>
               <div className={styles.detalle_nombre}>
-                {data_producto[0].nombre}
+                {data_producto.nombre}
               </div>
               <div className={styles.detalle_precio}>
-                ${formatNumberWithCommas(data_producto[0].precio)}
+                ${producto_precio}
               </div>
               <div className={styles.detalle_codigo}>
-                Código del producto {data_producto[0].referencia}
+                Código del producto {data_producto.referencia}
               </div>
               <div className={styles.detalle_color}>
                 <div className={styles.detalle_color_titulo}>
                   COLOR
                 </div>
                 <div className={styles.detalle_color_img}>
-                  <Image src={`/img/${data_producto[0].foto}`} width={100} height={100} alt={`Imagen de ${data_producto[0].nombre}`} className={styles.img_color}/>
+                  <Image src={`/img/${data_producto.foto}`} width={100} height={100} alt={`Imagen de ${data_producto.nombre}`} className={styles.img_color}/>
                 </div>
               </div>
               <div className={styles.detalle_talla}>
@@ -166,7 +167,7 @@ const DetallePage = () => {
             </div>
         </div>
       </div>
-     </div> */}
+     </div>
      <div className={styles.content_detalles_producto}>
      </div>
      <div className={styles.content_tecnologias}>
