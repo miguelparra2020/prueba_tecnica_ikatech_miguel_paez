@@ -200,6 +200,10 @@
     justify-content: center;
     color: $color_18;
 }
+.detalle_carrito_favorito:hover{
+    color: $color_29;
+    cursor: pointer;
+}
 .detalle_talla_opciones{
     width: 100%;
     display: flex;
@@ -232,7 +236,10 @@
     font-weight: 600;
     font-size: 14px;
     color: $color_29;
-
+}
+.div_tallas:hover{
+    opacity: 0.6;
+    cursor: pointer; 
 }
 // content fotos talla
 
