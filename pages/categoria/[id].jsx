@@ -96,17 +96,52 @@ const DetallePage = () => {
                 TALLA
               </div>
               <div className={styles.detalle_talla_opciones}>
-                OPCIONES TALLA
+                <div className={styles.detalle_talla_opcion_1}>
+                  <div className={styles.div_tallas}>
+                    5
+                  </div>
+                  <div className={styles.div_tallas}>
+                    5.5
+                  </div>
+                  <div className={styles.div_tallas}>
+                    6
+                  </div>
+                  <div className={styles.div_tallas}>
+                    6.5
+                  </div>
+                  <div className={styles.div_tallas}>
+                    7
+                  </div>
+                </div>
+                <div className={styles.detalle_talla_opcion_2}>
+                  <div className={styles.div_tallas}>
+                    7.5    
+                  </div>
+                  <div className={styles.div_tallas}>
+                    8
+                  </div>
+                  <div className={styles.div_tallas}>
+                    8.5
+                  </div>
+                  <div className={styles.div_tallas}>
+                    9
+                  </div>
+                  <div className={styles.div_tallas}>
+                    9.5
+                  </div>
+                </div>
               </div>
-              <div className={styles.detalle_talla}>
+              <div className={styles.detalle_guia_talla}>
                 GUÍA DE TALLAS
               </div>
-              <div className={styles.detalle_talla}>
-                <div>
-                  AÑADIR AL CARRITO
-                </div>
-                <div>
-                  favorito
+              <div className={styles.detalle_carrito}>
+                <button className={styles.detalle_carrito_anadir}>
+                    AÑADIR AL CARRITO
+                </button>
+                <div className={styles.detalle_carrito_favorito}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+</svg>
                 </div>
               </div>
 
