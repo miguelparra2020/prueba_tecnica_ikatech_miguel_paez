@@ -103,6 +103,10 @@
     justify-content: center;
     color: $color_black;
 }
+.div_buscador_icon:hover{
+    cursor: pointer;
+    background-color: $color_24;
+}
 .div_car_movil{
     display: none;
 }
