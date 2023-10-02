@@ -121,7 +121,7 @@ const DetallePage = () => {
                 {data_producto.nombre}
               </div>
               <div className={styles.detalle_precio}>
-                ${data_producto.precio}
+                ${formatNumberWithCommas(data_producto.precio)}
               </div>
               <div className={styles.detalle_codigo}>
                 Código del producto {data_producto.referencia}
